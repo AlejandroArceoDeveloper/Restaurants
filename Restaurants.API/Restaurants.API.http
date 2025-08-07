@@ -1,0 +1,50 @@
+@Restaurants.API_HostAddress = https://localhost:7188
+
+GET {{Restaurants.API_HostAddress}}/api/restaurants
+
+###
+
+@id=0
+GET {{Restaurants.API_HostAddress}}/api/restaurants/1
+
+###
+
+
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants
+Content-Type: application/json
+
+{
+  "Name": "La Parrilla Argentina",
+  "Description": "Especialidad en carnes a la brasa y cocina tradicional argentina.",
+  "Category": "Carnes",
+  "HasDelivery": true,
+  "ContactEmail": "contacto@laparrilla.com",
+  "ContactNumber": "123456789",
+  "City": "Madrid",
+  "Street": "Calle Mayor 10",
+  "PostalCode": "28013"
+}
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/1
+
+###
+
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/4554
+
+###
+
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/3
+Content-Type: application/json
+
+{
+    "Name": "La Parrilla Argentina Actualizada",
+    "Description": "Especialidad en carnes a la brasa y cocina tradicional argentina, con un nuevo menú.",
+    "Category": "Carnes",
+    "HasDelivery": true
+   
+}
+
+###
